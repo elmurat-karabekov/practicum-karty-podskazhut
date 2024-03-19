@@ -2,7 +2,7 @@
 
 A HTML, CSS and Vanilla JavaScript project from Yandex.Practicum «Frontend Developer» course.
 
-This project was created to focus on creating responsive websites, that would look great on various devices and and browsers. The website can be toggled between Dark and Light themes.
+This project was created to focus on creating responsive websites, that would look great on various devices and browsers. The website can be toggled between Dark and Light themes.
 
 ### Project Checklist (with sample code)
 
