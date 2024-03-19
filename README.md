@@ -8,20 +8,11 @@ This project was created to focus on creating responsive websites, that would lo
 
 <details>
   <summary>using &lt;picture&gt; tag to load only image optimal for current device</summary>
-  ```html
-       <picture>
-          <source srcset="./images/cards-1x.avif 1x" type="image/avif" />
-          <source srcset="./images/cards-2x.avif 2x" type="image/avif" />
-          <source srcset="./images/cards-1x.webp 1x" type="image/webp" />
-          <source srcset="./images/cards-2x.webp 2x" type="image/webp" />
-          <img
-            srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x"
-            loading="lazy"
-            class="content__picture"
-            alt="Картинка с блокнотом, телефоном и карточкой с надписью Trust in the you of now"
-          />
-        </picture>
-```
+  <pre><code class="language-html">&lt;picture&gt;
+    &lt;source srcset="example.webp" type="image/webp"&gt;
+    &lt;source srcset="example.jpg" type="image/jpeg"&gt;
+    &lt;img src="example.jpg" alt="Description"&gt;
+  &lt;/picture&gt;</code></pre>
 </details>
 
 ### Figma Layout
