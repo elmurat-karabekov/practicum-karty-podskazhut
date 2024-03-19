@@ -52,6 +52,52 @@ figure {
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
 }
 
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block: 1px solid currentColor;
+  padding-block: 20px;
+}
+
+.header__theme-toggler {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-button {
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 0;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: var(--accent-color);
+  block-size: 0.5ch;
+  inline-size: calc(100% + 8px);
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
+}
+
 .content__title {
   margin-block-start: 7vi;
   margin-block-end: 2.5vi;
@@ -69,10 +115,10 @@ figure {
 .content__text-block_type_first-lettered
   > .content__paragraph:first-child::first-letter {
   display: inline-block;
-  font-size: 30px;
-  font-weight: 700;
-  padding: 0 4px;
   margin-inline-end: 5px;
+  padding: 0 4px;
+  font-weight: 700;
+  font-size: 30px;
   background-color: var(--accent-color);
 }
 
@@ -82,9 +128,9 @@ figure {
 
 .content__blockquote {
   margin-inline-start: auto;
-  inline-size: 75%;
   font-style: italic;
   line-height: 2;
+  inline-size: 75%;
 }
 
 .content__list {
@@ -103,13 +149,13 @@ figure {
 .content__list-item::before {
   content: '';
   position: absolute;
-  inline-size: 15px;
-  block-size: 15px;
   margin-block-start: -7.5px;
   background-image: url(../images/marker-light.svg);
-  background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  inline-size: 15px;
+  block-size: 15px;
   inset-block-start: 50%;
   inset-inline-start: -25px;
 }
@@ -127,8 +173,8 @@ figure {
 
 .content__picture-caption {
   border-block-end: 1px solid currentColor;
-  font-size: 18px;
   padding: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -137,9 +183,9 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 4/3;
-  border: 1px solid currentColor;
   margin-block-start: 7vi;
+  border: 1px solid currentColor;
+  aspect-ratio: 4/3;
 }
 
 .content__card-title {
@@ -158,10 +204,10 @@ figure {
 .colored-text::after {
   content: '';
   position: absolute;
+  z-index: -1;
+  background-color: var(--accent-color);
   inline-size: calc(100% + 8px);
   block-size: 0.5ch;
-  background-color: var(--accent-color);
-  z-index: -1;
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
 }
