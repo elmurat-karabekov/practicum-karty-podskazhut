@@ -131,3 +131,37 @@ figure {
   padding: 20px;
   text-align: center;
 }
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 4/3;
+  border: 1px solid currentColor;
+  margin-block-start: 7vi;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+}
+
+.colored-text::after {
+  content: '';
+  position: absolute;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  background-color: var(--accent-color);
+  z-index: -1;
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
+}
