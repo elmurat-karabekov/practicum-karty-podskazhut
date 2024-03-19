@@ -7,12 +7,56 @@ This project was created to focus on creating responsive websites, that would lo
 ### Project Checklist
 
 <details>
-  <summary>using &lt;picture&gt; tag to load only image optimal for current device</summary>
-  <pre><code class="language-html">&lt;picture&gt;
-    &lt;source srcset="example.webp" type="image/webp"&gt;
-    &lt;source srcset="example.jpg" type="image/jpeg"&gt;
-    &lt;img src="example.jpg" alt="Description"&gt;
-  &lt;/picture&gt;</code></pre>
+  <summary>use <b>&lt;picture&gt;</b> tag to load only image optimal for current device</summary>
+  <pre><code>&lt;picture&gt;
+    &lt;source srcset="./images/cards-1x.avif 1x" type="image/avif" /&gt;
+    &lt;source srcset="./images/cards-2x.avif 2x" type="image/avif" /&gt;
+    &lt;source srcset="./images/cards-1x.webp 1x" type="image/webp" /&gt;
+    &lt;source srcset="./images/cards-2x.webp 2x" type="image/webp" /&gt;
+    &lt;img
+        srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x"
+        loading="lazy"
+        class="content__picture"
+        alt="Картинка с блокнотом, телефоном и карточкой с надписью Trust in the you of now"
+    /&gt;
+&lt;/picture&gt;
+</code></pre>
+</details>
+
+<details>
+  <summary>implement <b>dark/light theme toggler</b> using custom css properties</summary>
+  <pre><code>:root {
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
+  --main-font: Raleway;
+  --accent-font: 'STIX Two Text';
+}
+.theme_dark {
+--bg-color: #171717;
+--text-color: #b3b3b3;
+--accent-color: transparent;
+}
+</code></pre>
+</details>
+
+<details>
+  <summary>use <b>relative units of measurement</b> for adaptive layout</summary>
+  <pre><code>.header {
+  padding-block-start: 10vi;
+}
+</code></pre>
+</details>
+
+<details>
+  <summary>use <b>CSS functions</b></summary>
+  <pre><code>.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+.content__figure {
+  inline-size: calc(100% + 10vi);
+}
+</code></pre>
 </details>
 
 ### Figma Layout
