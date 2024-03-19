@@ -1,10 +1,10 @@
-# Karty-podskazhut
+# [Karty-podskazhut](https://practicum-karty-podskazhut.netlify.app/)
 
-A HTML, CSS and Vanilla JavaScript project form Yandex.Practicum «Frontend Developer» course.
+A HTML, CSS and Vanilla JavaScript project from Yandex.Practicum «Frontend Developer» course.
 
-This project was created to focus on creating responsive websites, that would look good on various devices and and browsers. The website can be toggled between Dark and Light themes.
+This project was created to focus on creating responsive websites, that would look great on various devices and and browsers. The website can be toggled between Dark and Light themes.
 
-### Project Checklist
+### Project Checklist (with sample code)
 
 <details>
   <summary>use <b>&lt;picture&gt;</b> tag to load only image optimal for current device</summary>
